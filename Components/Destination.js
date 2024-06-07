@@ -1,5 +1,5 @@
 import React from "react"
-import Data from "../data.js"
+import Data from "../public/data.js"
 
 export default function Destinations() {
     let destination = Data.map(function (dest) {
