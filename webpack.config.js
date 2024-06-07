@@ -20,6 +20,6 @@ module.exports = {
     ]
   },
   "entry": {
-    "index": "./src/index.js"
+    "index": "./index.js"
   }
 };
