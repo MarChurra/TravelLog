@@ -34,15 +34,15 @@ header {
     width: 95%;
     margin: 2em auto;
     border-bottom: 2px solid #F5F5F5;
-     display: grid;
-    grid-template-areas: 
-    "destinationImg location"
-    "destinationImg destinationTitle"
-    "destinationImg destinationDates"
-    "destinationImg destinationDescription" 
+    display: grid;
+    grid-template-areas:
+        "destinationImg location"
+        "destinationImg destinationTitle"
+        "destinationImg destinationDates"
+        "destinationImg destinationDescription"
     ;
     padding-bottom: 2em;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cards:hover {
@@ -56,32 +56,34 @@ header {
 }
 
 .destination-img {
-   grid-area: destinationImg;
-    width: 100%; 
-    height: 100%; 
+  margin: auto 2em auto 0;
+    grid-area: destinationImg;
+    width: 100%;
+    height: 100%;
     min-width: 100px;
-    max-width: 175px;
-    max-height: 500px;
-     min-height: 300px;
+    max-width: 125px;
+    max-height: 300px;
+    min-height: 300px;
     object-fit: cover;
     border-radius: 10px;
-    margin-right: 3em;
 }
 
-.location{
+.location {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
     grid-area: location;
+    margin-bottom: 0.5em;
 }
 
 .location a {
-     text-decoration: underline;
-    text-decoration-color: #918E9B; /* Match the underline color with the text color */
-    text-decoration-thickness: 1px; /* Set the thickness of the underline */
-    text-underline-offset: 3px; /* Adjust the distance between the text and the underline */
-    font-size: 0.8rem;
+    text-decoration: underline;
+    text-decoration-color: #918E9B;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    font-size: 0.6rem;
     color: #918E9B;
+    text-align: center;
 }
 
 .destination-location {
@@ -97,22 +99,24 @@ header {
     padding-left: 0.8em;
 }
 
-.destination-title{
+.destination-title {
     grid-area: destinationTitle;
     font-weight: 700;
-   margin-bottom: 0.5em;
-   margin-top: 0;
-    font-size: 1.5rem;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-top: 0;
+    font-size: 1.25rem;
 }
 
-.travel-dates{
+.travel-dates {
     font-weight: 700;
     grid-area: destinationDates;
     padding-bottom: 0;
     margin-bottom: 0;
+    font-size: 0.8rem;
 }
 
-.destination-description{
+.destination-description {
     margin-top: 1em;
     font-weight: 500;
     line-height: 1.5;
@@ -121,6 +125,7 @@ header {
     width: 90%;
     grid-area: destinationDescription;
     font-size: 0.8rem;
+    text-align: left;
 }
 
 
@@ -128,63 +133,67 @@ header {
 
 @media(min-width:750px) {
     .cards {
-    width: 90%;
-}
+        width: 90%;
+    }
 
-.cards:hover {
-    transform: translateX(10px) scale(1.05); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-}
-
-
-.destination-img, .location, .destination-title, .travel-dates, .destination-description {
-    transition: transform 0.3s ease;
-}
-
-.cards:hover .destination-img,
-.cards:hover .location,
-.cards:hover .destination-title,
-.cards:hover .travel-dates,
-.cards:hover .destination-description {
-    transform: scale(1.025); 
-}
-
-.cards:first-child {
-    margin-top: 4em;
-}
-
-.destination-img {
-    max-width: 200px;
-    height: 100%;
-}
-
-.location a {
-    font-size: 1rem;
-}
-
-.destination-location {
-    font-size: 1.5rem;
-}
+    .cards:hover {
+        transform: translateX(10px) scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
 
-.pin-icon {
-    width: 25px;
-}
+    .destination-img,
+    .location,
+    .destination-title,
+    .travel-dates,
+    .destination-description {
+        transition: transform 0.3s ease;
+    }
 
-.destination-link {
-    padding-left: 0.5em;
-}
+    .cards:hover .destination-img,
+    .cards:hover .location,
+    .cards:hover .destination-title,
+    .cards:hover .travel-dates,
+    .cards:hover .destination-description {
+        transform: scale(1.025);
+    }
 
-.destination-title{
-    font-size: 2rem;
-}
+    .cards:first-child {
+        margin-top: 4em;
+    }
 
-.travel-dates{
-   font-size: 1.1rem;
-}
+    .destination-img {
+        max-width: 200px;
+        height: 100%;
+    }
 
-.destination-description{
-    width: 50%;
-    font-size: 1rem;
-}
+    .location a {
+        font-size: 1rem;
+    }
+
+    .destination-location {
+        font-size: 1.5rem;
+    }
+
+
+    .pin-icon {
+        width: 25px;
+    }
+
+    .destination-link {
+        padding-left: 0.5em;
+    }
+
+    .destination-title {
+        font-size: 2rem;
+    }
+
+    .travel-dates {
+        font-size: 1.1rem;
+    }
+
+    .destination-description {
+        width: 50%;
+        font-size: 1rem;
+    }
 }
